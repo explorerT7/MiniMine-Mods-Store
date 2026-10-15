@@ -1,0 +1,322 @@
+{
+  "format": "minimine-mod",
+  "formatVersion": 1,
+  "id": "ruby_pack",
+  "name": "Ruby Pack (example of every feature)",
+  "version": "1.0.0",
+  "author": "You",
+  "description": "Example of every mod feature. It replaces dirt with mud and removes glass, so install it only to experiment.",
+  "blocks": [
+    {
+      "id": "ruby_ore",
+      "name": "Ruby Ore",
+      "style": "ore",
+      "color": "#d11a4a",
+      "breakTime": {
+        "stone_pickaxe": 6,
+        "iron_pickaxe": 4,
+        "diamond_pickaxe": 3
+      },
+      "drops": "ruby",
+      "generate": {
+        "chance": 0.35,
+        "size": [
+          1,
+          3
+        ],
+        "deepOnly": true,
+        "veins": 1
+      }
+    },
+    {
+      "id": "ruby_block",
+      "name": "Block of Rubies",
+      "style": "solid",
+      "color": "#c2143f",
+      "breakTime": {
+        "hand": 8,
+        "stone_pickaxe": 3
+      }
+    },
+    {
+      "id": "ruby_bricks",
+      "name": "Ruby Bricks",
+      "style": "bricks",
+      "color": "#b01238",
+      "breakTime": {
+        "hand": 5,
+        "stone_pickaxe": 2
+      }
+    },
+    {
+      "id": "ruby_planks",
+      "name": "Ruby Planks",
+      "style": "planks",
+      "color": "#a0522d",
+      "breakTime": {
+        "hand": 1
+      }
+    },
+    {
+      "id": "ruby_checker",
+      "name": "Ruby Checker Block",
+      "texture": {
+        "rows": [
+          "bbbbaaaabbbbaaaa",
+          "bbbbaaaabbbbaaaa",
+          "bbbbaaaabbbbaaaa",
+          "bbbbaaaabbbbaaaa",
+          "aaaabbbbaaaabbbb",
+          "aaaabbbbaaaabbbb",
+          "aaaabbbbaaaabbbb",
+          "aaaabbbbaaaabbbb",
+          "bbbbaaaabbbbaaaa",
+          "bbbbaaaabbbbaaaa",
+          "bbbbaaaabbbbaaaa",
+          "bbbbaaaabbbbaaaa",
+          "aaaabbbbaaaabbbb",
+          "aaaabbbbaaaabbbb",
+          "aaaabbbbaaaabbbb",
+          "aaaabbbbaaaabbbb"
+        ],
+        "palette": {
+          "a": "#d11a4a",
+          "b": "#7a0c27"
+        }
+      },
+      "breakTime": {
+        "hand": 3
+      }
+    },
+    {
+      "id": "mud_block",
+      "name": "Mud",
+      "style": "solid",
+      "color": "#6b4a2f",
+      "breakTime": {
+        "hand": 0.5
+      },
+      "drops": "mud_block"
+    }
+  ],
+  "items": [
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "shape": "gem",
+      "color": "#e0204f"
+    },
+    {
+      "id": "ruby_dust",
+      "name": "Ruby Dust",
+      "shape": "dust",
+      "color": "#e0204f"
+    },
+    {
+      "id": "ruby_charm",
+      "name": "Ruby Charm",
+      "icon": {
+        "rows": [
+          "................",
+          "................",
+          "...rrrr..rrrr...",
+          "..rRRRrrrrrrrr..",
+          "..rRRrrrrrrrrr..",
+          "..rrrrrrrrrrrr..",
+          "..rrrrrrrrrrrr..",
+          "...rrrrrrrrrd...",
+          "....rrrrrrdd....",
+          ".....rrrrdd.....",
+          "......rrdd......",
+          ".......dd.......",
+          "................",
+          "................",
+          "................",
+          "................"
+        ],
+        "palette": {
+          "r": "#e0204f",
+          "R": "#ff8fa8",
+          "d": "#8f1030"
+        }
+      }
+    },
+    {
+      "id": "ruby_sword",
+      "name": "Ruby Sword",
+      "shape": "sword",
+      "color": "#e0204f",
+      "damage": 6,
+      "cooldown": 0.45
+    },
+    {
+      "id": "ruby_axe",
+      "name": "Ruby Axe",
+      "shape": "axe",
+      "color": "#e0204f",
+      "damage": 7,
+      "cooldown": 0.9
+    },
+    {
+      "id": "ruby_pickaxe",
+      "name": "Ruby Pickaxe",
+      "shape": "pickaxe",
+      "color": "#e0204f",
+      "tool": {
+        "pickaxe": true,
+        "times": {
+          "stone": 1,
+          "coal": 1.5,
+          "iron": 3,
+          "diamond": 6,
+          "pure_iron": 9,
+          "ruby_ore": 2
+        }
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "result": "ruby_sword",
+      "pattern": [
+        "R",
+        "R",
+        "K"
+      ],
+      "key": {
+        "R": "ruby",
+        "K": "stick"
+      }
+    },
+    {
+      "result": "ruby_axe",
+      "pattern": [
+        "RR",
+        "RK",
+        ".K"
+      ],
+      "key": {
+        "R": "ruby",
+        "K": "stick"
+      }
+    },
+    {
+      "result": "ruby_pickaxe",
+      "pattern": [
+        "RRR",
+        ".K.",
+        ".K."
+      ],
+      "key": {
+        "R": "ruby",
+        "K": "stick"
+      }
+    },
+    {
+      "result": "ruby_block",
+      "pattern": [
+        "RRR",
+        "RRR",
+        "RRR"
+      ],
+      "key": {
+        "R": "ruby"
+      }
+    },
+    {
+      "result": "ruby",
+      "count": 9,
+      "shapeless": {
+        "ruby_block": 1
+      }
+    },
+    {
+      "result": "ruby_dust",
+      "count": 2,
+      "shapeless": {
+        "ruby": 1
+      }
+    },
+    {
+      "result": "ruby_charm",
+      "pattern": [
+        ".R.",
+        "RDR",
+        ".R."
+      ],
+      "key": {
+        "R": "ruby",
+        "D": "ruby_dust*2"
+      }
+    },
+    {
+      "result": "ruby_bricks",
+      "count": 4,
+      "pattern": [
+        "BB",
+        "BB"
+      ],
+      "key": {
+        "B": "ruby_block"
+      }
+    },
+    {
+      "result": "ruby_planks",
+      "count": 4,
+      "pattern": [
+        "W",
+        "W"
+      ],
+      "key": {
+        "W": "wood"
+      }
+    },
+    {
+      "result": "ruby_checker",
+      "count": 2,
+      "pattern": [
+        "BP",
+        "PB"
+      ],
+      "key": {
+        "B": "ruby_block",
+        "P": "ruby_planks"
+      }
+    }
+  ],
+  "replaceBlocks": [
+    {
+      "block": "dirt",
+      "with": "mud_block"
+    }
+  ],
+  "removeBlocks": [
+    "glass"
+  ],
+  "tweaks": {
+    "maxHealth": 20,
+    "walkSpeed": 7,
+    "sprintSpeed": 14,
+    "jumpVelocity": 9,
+    "gravity": 22,
+    "breakTimes": {
+      "stone": {
+        "stone_pickaxe": 1.5
+      },
+      "coal": {
+        "stone_pickaxe": 3
+      }
+    },
+    "weaponDamage": {
+      "iron_sword": 4
+    },
+    "armorPoints": {
+      "iron": {
+        "helmet": 3
+      },
+      "shield": {
+        "shield": 3
+      }
+    }
+  }
+}

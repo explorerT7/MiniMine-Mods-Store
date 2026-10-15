@@ -1,0 +1,279 @@
+{
+  "format": "minimine-mod",
+  "formatVersion": 1,
+  "id": "lunar_survival",
+  "name": "Lunar Survival Pack",
+  "version": "1.0.0",
+  "author": "You",
+  "description": "Transforms the environment into the Moon with lunar regolith, low gravity, titanium ores, custom oxygen gear, and high-tech lunar structures.",
+  "blocks": [
+    {
+      "id": "lunar_titanium_ore",
+      "name": "Lunar Titanium Ore",
+      "style": "ore",
+      "color": "#78909c",
+      "breakTime": {
+        "stone_pickaxe": 5,
+        "iron_pickaxe": 3,
+        "diamond_pickaxe": 2
+      },
+      "drops": "lunar_dust",
+      "generate": {
+        "chance": 0.4,
+        "size": [
+          2,
+          4
+        ],
+        "deepOnly": true,
+        "veins": 2
+      }
+    },
+    {
+      "id": "regolith",
+      "name": "Lunar Regolith",
+      "style": "solid",
+      "color": "#b0bec5",
+      "breakTime": {
+        "hand": 0.8
+      },
+      "drops": "regolith"
+    },
+    {
+      "id": "lunar_bricks",
+      "name": "Lunar Bricks",
+      "style": "bricks",
+      "color": "#78909c",
+      "breakTime": {
+        "hand": 4,
+        "stone_pickaxe": 2
+      }
+    },
+    {
+      "id": "lunar_plating",
+      "name": "Lunar Plating Planks",
+      "style": "planks",
+      "color": "#eceff1",
+      "breakTime": {
+        "hand": 1
+      }
+    },
+    {
+      "id": "moon_base_tile",
+      "name": "Moon Base Tile",
+      "texture": {
+        "rows": [
+          "aaaaaaaaaaaaaaaa",
+          "abbbbbbbbbbbbbba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abccccccccccccba",
+          "abbbbbbbbbbbbbba",
+          "aaaaaaaaaaaaaaaa"
+        ],
+        "palette": {
+          "a": "#263238",
+          "b": "#607d8b",
+          "c": "#cfd8dc"
+        }
+      },
+      "breakTime": {
+        "hand": 3
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "titanium_ingot",
+      "name": "Titanium Ingot",
+      "shape": "gem",
+      "color": "#90a4ae"
+    },
+    {
+      "id": "lunar_dust",
+      "name": "Lunar Dust",
+      "shape": "dust",
+      "color": "#eceff1"
+    },
+    {
+      "id": "oxygen_badge",
+      "name": "Oxygen Tank Badge",
+      "icon": {
+        "rows": [
+          "................",
+          ".....bbbbbb.....",
+          "....bwwwwwxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          "....bwccccxb....",
+          ".....bbbbbb.....",
+          "................",
+          "................",
+          "................"
+        ],
+        "palette": {
+          "b": "#37474f",
+          "w": "#ffffff",
+          "c": "#00e5ff",
+          "x": "#00b0ff"
+        }
+      }
+    },
+    {
+      "id": "lunar_saber",
+      "name": "Lunar Saber",
+      "shape": "sword",
+      "color": "#00e5ff",
+      "damage": 8,
+      "cooldown": 0.35
+    },
+    {
+      "id": "lunar_axe",
+      "name": "Lunar Heavy Axe",
+      "shape": "axe",
+      "color": "#00e5ff",
+      "damage": 10,
+      "cooldown": 0.85
+    },
+    {
+      "id": "lunar_pickaxe",
+      "name": "Lunar Pickaxe",
+      "shape": "pickaxe",
+      "color": "#00e5ff",
+      "tool": {
+        "pickaxe": true,
+        "times": {
+          "stone": 0.8,
+          "coal": 1.0,
+          "iron": 2.0,
+          "diamond": 4.0,
+          "lunar_titanium_ore": 1.2
+        }
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "result": "titanium_ingot",
+      "count": 1,
+      "shapeless": {
+        "lunar_dust": 4
+      }
+    },
+    {
+      "result": "lunar_saber",
+      "pattern": [
+        "T",
+        "T",
+        "K"
+      ],
+      "key": {
+        "T": "titanium_ingot",
+        "K": "stick"
+      }
+    },
+    {
+      "result": "lunar_axe",
+      "pattern": [
+        "TT",
+        "TK",
+        ".K"
+      ],
+      "key": {
+        "T": "titanium_ingot",
+        "K": "stick"
+      }
+    },
+    {
+      "result": "lunar_pickaxe",
+      "pattern": [
+        "TTT",
+        ".K.",
+        ".K."
+      ],
+      "key": {
+        "T": "titanium_ingot",
+        "K": "stick"
+      }
+    },
+    {
+      "result": "oxygen_badge",
+      "pattern": [
+        ".D.",
+        "DTD",
+        ".D."
+      ],
+      "key": {
+        "T": "titanium_ingot",
+        "D": "lunar_dust*2"
+      }
+    },
+    {
+      "result": "lunar_bricks",
+      "count": 4,
+      "pattern": [
+        "RR",
+        "RR"
+      ],
+      "key": {
+        "R": "regolith"
+      }
+    },
+    {
+      "result": "moon_base_tile",
+      "count": 2,
+      "pattern": [
+        "TP",
+        "PT"
+      ],
+      "key": {
+        "T": "titanium_ingot",
+        "P": "lunar_plating"
+      }
+    }
+  ],
+  "replaceBlocks": [
+    {
+      "block": "dirt",
+      "with": "regolith"
+    }
+  ],
+  "removeBlocks": [
+    "water",
+    "grass"
+  ],
+  "tweaks": {
+    "maxHealth": 20,
+    "walkSpeed": 6,
+    "sprintSpeed": 12,
+    "jumpVelocity": 14,
+    "gravity": 4,
+    "breakTimes": {
+      "stone": {
+        "stone_pickaxe": 1.2
+      }
+    },
+    "weaponDamage": {
+      "iron_sword": 5
+    },
+    "armorPoints": {
+      "iron": {
+        "helmet": 4
+      }
+    }
+  }
+}
