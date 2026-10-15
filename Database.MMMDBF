@@ -1,0 +1,16 @@
+[Begin]
+
+Mod format: 1
+Mod name: Lunar Survival
+Mod Author: explorerT7 & CoreMace Technologies
+Mod Version Number: 1.0.0
+Mod Code File name: Lunar.json
+Mod Short Desc: Have fun exploring the moon;
+
+Mod format: 1
+Mod name: Example Ruby Mod
+Mod Author: explorerT7 & CoreMace Technologies
+Mod Version Number: 1.0.0
+Mod Code File name: example_mod.json
+Mod Short Desc: Learn More about mods
+[End]
